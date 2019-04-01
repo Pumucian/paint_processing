@@ -2,7 +2,8 @@ var colour = 6;
 var size = 3;
 var sizes = [2.5, 5, 7.5, 10, 12.5, 15, 20, 30];
 var maxSize = 8;
-var clearButton, sizeUpButton, sizeDownButton;
+var clearButton, sizeUpButton, sizeDownButton, eraserButton;
+var paint = true;
 
 function setup() {
   createCanvas(600, 600);
@@ -74,6 +75,7 @@ function changeColour(colour) {
 function getColour() {
   if (mouseX > 550 && mouseY < 100) {
     colour = Math.floor((mouseX - 550) / 25) * 4 + Math.floor(mouseY / 25);
+    paint = false;
   }
   return colour;
 }
@@ -122,7 +124,8 @@ function setEraser(){
 function paintEllipses() {
   if (mouseIsPressed) {
     changeColour(getColour());
-    ellipse(mouseX, mouseY, sizes[size], sizes[size]);
+    if (paint) ellipse(mouseX, mouseY, sizes[size], sizes[size]);
+    paint = true;
   }
 }
 

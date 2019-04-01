@@ -10,7 +10,7 @@ function setup() {
   noStroke();
 }
 
-function colorPalette() {
+function colourPalette() {
   changeColour(8);
   rect(550, 175, 50, 50);
   changeColour(0);
@@ -133,5 +133,5 @@ function draw() {
   showResetButton();
   showSizeButtons();
   showEraserButton();
-  colorPalette();
+  colourPalette();
 }

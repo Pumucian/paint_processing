@@ -1,7 +1,6 @@
 var colour = 6;
 var size = 3;
 var sizes = [2.5, 5, 7.5, 10, 12.5, 15, 20, 30];
-var maxSize = 8;
 var clearButton, sizeUpButton, sizeDownButton, eraserButton;
 var paint = true;
 
